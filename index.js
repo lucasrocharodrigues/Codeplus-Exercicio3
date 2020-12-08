@@ -24,6 +24,11 @@ const parentList = [
 ]
 
 function renderParentList(list){
+  for(const parent of list){
+    const li = document.createElement('li')
+    li.textContent = parent.name + ' é responsavel por ' + parent.children;
+    $parentList.appendChild(li)
+  }
   console.log(list);
 }
 
